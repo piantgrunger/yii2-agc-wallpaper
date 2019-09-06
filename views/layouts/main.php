@@ -19,7 +19,7 @@ AppAsset::register($this);
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="Wallpopper, simply described as high quality wallpapers database which searchable by keyword " />
+      <meta name="description" content="wallpoper, simply described as high quality wallpapers database which searchable by keyword " />
 
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
@@ -31,7 +31,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'wall<span>popper.id</span>',
+        'brandLabel' => 'wall<span>poper.id</span>',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar navbar-default',
@@ -59,7 +59,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; Wallpopper.id <?= date('Y') ?></p>
+        <p class="pull-left">&copy; wallpoper.id <?= date('Y') ?></p>
 
         <p class="pull-right">create from Surabaya,Indonesia with love </p>
     </div>

@@ -31,7 +31,7 @@ class KeywordController extends Controller
         $images = $imageScraper->scrape($keyword, '', ['image_size' => 'extra_large']);
         foreach($images as $image) {
             $model = new Wallpaper();
-            $model->title = 'Wallpopper Image '.$image['title'];
+            $model->title = 'wallpoper Image '.$image['title'];
             $model->link = $image['mediaurl'];
             $model->keyword = $keyword;
             $model->size = $image['size'];

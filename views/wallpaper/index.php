@@ -41,7 +41,7 @@ h1 {
     ?>
 
 <div id="wallpaper">
-    <h1><?=str_replace('Wallpopper Image', '', $image->title)?></h1>
+    <h1><?=str_replace('wallpoper Image', '', $image->title)?></h1>
     <div id="big" style="float: none; width: 1095px;">
 
 

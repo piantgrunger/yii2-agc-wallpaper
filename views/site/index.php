@@ -4,7 +4,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
-$this->title ="Wallpopper - Free Wallpaper";
+$this->title ="wallpoper - Free Wallpaper";
 $this->registerCSS("#searchInfo {
     color: #666666;
     font-size: 14px;
@@ -30,7 +30,7 @@ h1 {
 <div id="searchInfo">
 <img src="http://wallpoper.com/img/pola2.jpeg" style="position: relative; top: 0px; width: 250px;">
 <h1>We have Million Free Wallpapers</h1>
-<p>Looking for free wallpaper for your desktop or mobile device ? We have it! <br> Wallpopper.id simply described as high quality wallpapers database which is searchable by keyword, color and resolution.</p>        
+<p>Looking for free wallpaper for your desktop or mobile device ? We have it! <br> wallpoper.id simply described as high quality wallpapers database which is searchable by keyword, color and resolution.</p>        
 
 <div class="clr"></div>
 </div>

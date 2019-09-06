@@ -1,9 +1,8 @@
 <?php
    use yii\helpers\Html;
    use yii\helpers\Url;
-   
 
-   $this->registerCSS("#big {
+   $this->registerCSS('#big {
     display: block;
     position: relative;
     text-align: center;
@@ -19,7 +18,7 @@
 
 h1 {
     color: #000000;
-    font-family: \"Myriad Pro\",Helvetica,Arial,sans-serif;
+    font-family: "Myriad Pro",Helvetica,Arial,sans-serif;
     font-size: 36px;
     font-weight: bold;
     padding: 15px 0;
@@ -36,40 +35,38 @@ h1 {
     padding: 0 20px;
     margin-bottom: 20px;
 }
-"
+');
+   $this->title = $image->title;
 
-
-);
-
-?>
+    ?>
 
 <div id="wallpaper">
-    <h1><?=str_replace("Wallpopper Image","",$image->title)?></h1>
+    <h1><?=str_replace('Wallpopper Image', '', $image->title)?></h1>
     <div id="big" style="float: none; width: 1095px;">
 
 
- <?=     Html::img($image->link, ['width'=>1051.2 ,'alt' => $image->title,'title' => $image->title ])
+    <?=     Html::img($image->link, ['width'=>1051.2 ,'alt' => $image->title,'title' => $image->title ])
        
 
- ?>
+    ?>
 
-<p><?=$image->title.' ( '.$image->size.' ) '.implode(" , ", explode(' ', $image->title)) ?></p>
+<p><?=$image->title . ' ( ' . $image->size . ' ) ' . implode(' , ', explode(' ', $image->title)) ?></p>
 
 </div>
 
 <div id="biginfo" style="width: 735px;">
-				<h2><?=$image->title ?></h2>
+                <h2><?=$image->title ?></h2>
                 <p><?=$image->title ?> was added in <?= \Yii::$app->formatter->asDate($image->dateAdd) ?>. <?=$image->view?> users has viewed and downloaded this wallpaper.
                     
              You can download <?=$image->title ?>for free. All you need to do is help us grow by sharing this wallpaper if you like it :) </p>
                 
                     <p>
-                  <?=implode(" , ", explode(' ', $image->title))    ?>                </p>
+                    <?=implode(' , ', explode(' ', $image->title))    ?>                </p>
                     <br>
                   
                     <h3>How to Download</h3>
-					<p><strong>Desktop users:</strong> right click on the image and choose "save image as" or "set as desktop background". <strong>iPad/iPhone users:</strong> tap and hold in 2-seconds on the image then choose "save image"</p>
-					
+                    <p><strong>Desktop users:</strong> right click on the image and choose "save image as" or "set as desktop background". <strong>iPad/iPhone users:</strong> tap and hold in 2-seconds on the image then choose "save image"</p>
+                    
             
     </div>
  

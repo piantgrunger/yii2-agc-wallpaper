@@ -7,10 +7,11 @@ use yii\helpers\Html;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\widgets\Alert;
+use yii\helpers\Url;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
-$this->title ="Wallpopper - Free Wallpaper"
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -37,8 +38,12 @@ $this->title ="Wallpopper - Free Wallpaper"
         ],
     ]);
 
-
-
+    echo "<form class='navbar-form navbar-right' role='search' action=".Url::to(['site/search'])." method ='POST'>
+    <div class='form-group has-feedback'>
+         <input id='searchbox' name='search' type='text' placeholder='Search' class='form-control'>
+         <span id='searchicon' class='fa fa-search form-control-feedback'></span>
+     </div>
+</form>";
 
     NavBar::end();
     ?>

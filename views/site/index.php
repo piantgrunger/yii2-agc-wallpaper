@@ -4,6 +4,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
+$this->title ="Wallpopper - Free Wallpaper";
 
 ?>
 <div class="site-index">

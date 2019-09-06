@@ -14,6 +14,7 @@ use app\models\SignupForm;
 use app\models\Wallpaper;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
+use app\commands\KeywordController;
 
 class SiteController extends Controller
 {
@@ -69,11 +70,16 @@ class SiteController extends Controller
      *
      * @return mixed
      */
+    public function beforeAction($action)
+    {
+        $this->enableCsrfValidation = false;
+        return parent::beforeAction($action);
+    }
     public function actionIndex()
     {
         $images= Wallpaper::find()   ->orderBy(new \yii\db\Expression('rand()'))->limit(30)->all();
           $model = new LoginForm();
-        return $this->render('index',['model'=>$model,'images'=>$images]);
+        return $this->render('index', ['model'=>$model,'images'=>$images]);
     }
 
     /**
@@ -81,6 +87,22 @@ class SiteController extends Controller
      *
      * @return mixed
      */
+
+    public function actionSearch()
+    {
+        $request = Yii::$app->request;
+        $keyword = $request->post('search');
+  
+        
+        $controller = new KeywordController(Yii::$app->controller->id, Yii::$app);
+        $controller->actionIndex($keyword);
+        
+
+        $images= Wallpaper::find()->where(['keyword'=>$keyword])  ->orderBy(new \yii\db\Expression('rand()'))->limit(30)->all();
+        $model = new LoginForm();
+        return $this->render('index', ['model'=>$model,'images'=>$images]);
+    }
+
     public function actionLogin()
     {
         if (!\Yii::$app->user->isGuest) {

@@ -27,7 +27,7 @@ class AppAsset extends AssetBundle
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
         //additional import of third party alert project
-         'app\assets\SweetAlertAsset',
-         'app\assets\AdminLTEPluginAsset',
+       //  'app\assets\SweetAlertAsset',
+       //  'app\assets\AdminLTEPluginAsset',
     ];
 }

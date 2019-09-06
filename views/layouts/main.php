@@ -61,7 +61,7 @@ AppAsset::register($this);
     <div class="container">
         <p class="pull-left">&copy; Wallpopper.id <?= date('Y') ?></p>
 
-        <p class="pull-right">create from surabaya with love </p>
+        <p class="pull-right">create from Surabaya,Indonesia with love </p>
     </div>
 </footer>
 

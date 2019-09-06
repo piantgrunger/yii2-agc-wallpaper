@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "326a1b7c1ee05a0666afd23fa9256889",
+    "content-hash": "a6711a613a6b049274599fbd90a73ba7",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -213,6 +213,42 @@
                 "MIT"
             ],
             "time": "2017-10-14T08:42:41+00:00"
+        },
+        {
+            "name": "buchin/badwords",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/buchin/badwords.git",
+                "reference": "edd149af0cf174f273f5bb3ad6029c23ad117dde"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/buchin/badwords/zipball/edd149af0cf174f273f5bb3ad6029c23ad117dde",
+                "reference": "edd149af0cf174f273f5bb3ad6029c23ad117dde",
+                "shasum": ""
+            },
+            "require-dev": {
+                "kahlan/kahlan": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Buchin\\Badwords\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mochammad Masbuchin",
+                    "email": "buchin@dropsugar.com"
+                }
+            ],
+            "description": "Badwords filter in PHP",
+            "time": "2019-03-27T06:32:43+00:00"
         },
         {
             "name": "buchin/bing",
@@ -1857,7 +1893,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "buchin/badwords": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

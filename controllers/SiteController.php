@@ -15,6 +15,7 @@ use app\models\Wallpaper;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use app\commands\KeywordController;
+use Buchin\Badwords\Badwords;
 
 class SiteController extends Controller
 {
@@ -91,7 +92,7 @@ class SiteController extends Controller
     public function actionSearch()
     {
         $request = Yii::$app->request;
-        $keyword = $request->post('search');
+        $keyword = Badwords::strip($request->post('search'));
   
         
         $controller = new KeywordController(Yii::$app->controller->id, Yii::$app);

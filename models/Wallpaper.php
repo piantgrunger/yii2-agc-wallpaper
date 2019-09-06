@@ -35,7 +35,7 @@ class Wallpaper extends \yii\db\ActiveRecord
             [
                 'class' => SluggableBehavior::className(),
                 'attribute' => 'title',
-                // 'slugAttribute' => 'slug',
+                 'ensureUnique' => true,
             ],
         ];
     }

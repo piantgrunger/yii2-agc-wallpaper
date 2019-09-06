@@ -3,27 +3,32 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 ?>
 <div class="site-index">
 <?php
-   foreach ($images as $image) {
-       ?>
+foreach ($images as $image) {
+    ?>
 <div class="col-md-4" >
     <div class="panel panel-success">
         <div class="panel-heading">
 
-       <?=$image->title?>
+    <?=$image->title?>
 
 
         </div>
         <div class="panel-body">
-       <?= Html::img($image->link, ["width"=>280,"Height" =>175 ,'alt' => $image->title ]); ?>
+       <?=Html::a(
+           Html::img($image->link, ['width'=>280,'Height' =>175 ,'alt' => $image->title ]),
+           Url::to(['/wallpaper/','slug'=>$image->slug]),
+           ['title'=>$image->title]
+       ); ?>
        </div>
        </div>
    </div>
-<?php
-   }
+    <?php
+}
 
 ?>
 </div>

@@ -43,8 +43,8 @@ class Wallpaper extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['dateAdd'], 'safe'],
-            [['title', 'slug', 'link'], 'string', 'max' => 255],
+            [['dateAdd','view','size'], 'safe'],
+            [['title', 'slug', 'link','keyword'], 'string', 'max' => 255],
         ];
     }
 

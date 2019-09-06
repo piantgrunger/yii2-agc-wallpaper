@@ -33,6 +33,10 @@ class KeywordController extends Controller
             $model = new Wallpaper();
             $model->title = 'Wallpopper Image '.$image['title'];
             $model->link = $image['mediaurl'];
+            $model->keyword = $keyword;
+            $model->size = $image['size'];
+            
+       
             $model->dateAdd = date('Y-m-d H:i:s');
             $model->save();
 

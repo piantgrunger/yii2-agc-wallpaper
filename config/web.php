@@ -51,7 +51,7 @@ $config = [
        // Use pretty URLs
        'enablePrettyUrl' => true,
        'rules' => [
-        'wallpaper/<slug:[0-9a-zA-Z\-]+>/?' => 'wallpaper/slug',
+        'wallpaper/<slug>' => 'wallpaper/index'
        ],
    ],
       'cache' => [

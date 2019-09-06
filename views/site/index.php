@@ -48,7 +48,7 @@ foreach ($images as $image) {
         <div class="panel-body">
        <?=Html::a(
            Html::img($image->link, ['width'=>280,'Height' =>175 ,'alt' => $image->title ]),
-           Url::to(['/wallpaper/','slug'=>$image->slug]),
+           Url::to(['/wallpaper/'.$image->slug]),
            ['title'=>$image->title]
        ); ?>
        </div>

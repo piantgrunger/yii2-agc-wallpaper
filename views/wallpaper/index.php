@@ -1,8 +1,9 @@
 <?php
    use yii\helpers\Html;
-   use yii\helpers\Url;
+use yii\helpers\Url;
+use dosamigos\disqus\Comments;
 
-   $this->registerCSS('#big {
+$this->registerCSS('#big {
     display: block;
     position: relative;
     text-align: center;
@@ -39,14 +40,15 @@ h1 {
    $this->title = $image->title;
 
     ?>
+<div class="index">
 
-<div id="wallpaper">
+<div id="wallpaper" class="col-md-12">
     <h1><?=str_replace('wallpoper Image', '', $image->title)?></h1>
-    <div id="big" style="float: none; width: 1095px;">
+    <div id="big" style="float: none;">
 
 
     <?=     Html::img($image->link, ['width'=>1051.2 ,'alt' => $image->title,'title' => $image->title ])
-       
+
 
     ?>
 
@@ -54,30 +56,47 @@ h1 {
 
 </div>
 
-<div id="biginfo" style="width: 735px;">
+<div id="biginfo" style="">
                 <h2><?=$image->title ?></h2>
                 <p><?=$image->title ?> was added in <?= \Yii::$app->formatter->asDate($image->dateAdd) ?>. <?=$image->view?> users has viewed and downloaded this wallpaper.
-                    
+
              You can download <?=$image->title ?>for free. All you need to do is help us grow by sharing this wallpaper if you like it :) </p>
-                
+
                     <p>
                     <?=implode(' , ', explode(' ', $image->title))    ?>                </p>
                     <br>
-                  
+
                     <h3>How to Download</h3>
                     <p><strong>Desktop users:</strong> right click on the image and choose "save image as" or "set as desktop background". <strong>iPad/iPhone users:</strong> tap and hold in 2-seconds on the image then choose "save image"</p>
-                    
-            
+
+
     </div>
- 
-    
+
+              <div class="comments">
+                <?php    echo Comments::widget([
+    // see http://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables
+    'shortname' => 'wallpoper.id',
+    'identifier' => $image->slug]);
+    ?>
+
+                    </div>
+
+
+
+
+
+
+</div>
+
+
+
 <br>
     <br>
- <h2>Related Wallpaper</h2>    
+ <h2>Related Wallpaper</h2>
 
 <?php
 foreach ($relatedPost as $image) {
-    ?>
+        ?>
 <div class="col-md-4" >
     <div class="panel panel-success">
         <div class="panel-heading">
@@ -88,20 +107,15 @@ foreach ($relatedPost as $image) {
         </div>
         <div class="panel-body">
        <?=Html::a(
-           Html::img($image->link, ['width'=>280,'Height' =>175 ,'alt' => $image->title ]),
-           Url::to(['/wallpaper/'.$image->slug]),
-           ['title'=>$image->title]
-       ); ?>
+            Html::img($image->link, ['width'=>280,'Height' =>175 ,'alt' => $image->title ]),
+            Url::to(['/wallpaper/'.$image->slug]),
+            ['title'=>$image->title]
+        ); ?>
        </div>
        </div>
    </div>
     <?php
-}
+    }
 
 ?>
-
-
-
-
 </div>
-

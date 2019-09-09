@@ -28,9 +28,10 @@ h1 {
 ?>
 <div class="site-index">
 <div id="searchInfo">
-<img src="http://wallpoper.com/img/pola2.jpeg" style="position: relative; top: 0px; width: 250px;">
+<img src="<?=Url::to(['/img/pola2.jpeg'])?>" style="position: relative; top: 0px; width: 250px;">
 <h1>We have Million Free Wallpapers</h1>
-<p>Looking for free wallpaper for your desktop or mobile device ? We have it! <br> wallpoper.id simply described as high quality wallpapers database which is searchable by keyword, color and resolution.</p>        
+<p>Looking for free wallpaper for your desktop or mobile device ? We have it! <br> 
+  wallpoper.id simply described as high quality wallpapers database which is searchable by keyword.</p>        
 
 <div class="clr"></div>
 </div>

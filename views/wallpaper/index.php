@@ -43,7 +43,7 @@ h1 {
 <div class="index">
 
 <div id="wallpaper" class="col-md-12">
-    <h1><?=str_replace('wallpoper Image', '', $image->title)?></h1>
+    <h1><?=str_replace('Wallpoper Image', '', $image->title)?></h1>
     <div id="big" style="float: none;">
 
 
@@ -51,7 +51,16 @@ h1 {
 
 
     ?>
+<br>
+<br>
+<a class="btn btn-primary" href="https://www.facebook.com/sharer.php?<?=Yii::$app->request->url?>">
+<i class="fa fa-facebook" aria-hidden="true"></i>
+</a>
+<a class="btn btn-primary" href="https://twitter.com/intent/tweet?url=<?=Yii::$app->request->url?>&text=<?=$image->title?>">
+<i class="fa fa-twitter" aria-hidden="true"></i>
+</a>
 
+<br>
 <p><?=$image->title . ' ( ' . $image->size . ' ) ' . implode(' , ', explode(' ', $image->title)) ?></p>
 
 </div>

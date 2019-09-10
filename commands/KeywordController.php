@@ -28,10 +28,10 @@ class KeywordController extends Controller
         $Modelkeyword->keyword = $keyword;
         $Modelkeyword->save();
         $imageScraper = new Image;
-        $images = $imageScraper->scrape($keyword, '', ['image_size' => 'extra_large']);
+        $images = $imageScraper->scrape($keyword .' Wallpaper', '', ['image_size' => 'extra_large']);
         foreach($images as $image) {
             $model = new Wallpaper();
-            $model->title = 'wallpoper Image '.$image['title'];
+            $model->title = 'Wallpoper Image '.$image['title'];
             $model->link = $image['mediaurl'];
             $model->keyword = $keyword;
             $model->size = $image['size'];

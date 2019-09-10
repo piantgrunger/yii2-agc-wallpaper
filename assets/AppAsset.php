@@ -29,5 +29,6 @@ class AppAsset extends AssetBundle
         //additional import of third party alert project
        //  'app\assets\SweetAlertAsset',
        //  'app\assets\AdminLTEPluginAsset',
+       '\rmrevin\yii\fontawesome\AssetBundle'
     ];
 }

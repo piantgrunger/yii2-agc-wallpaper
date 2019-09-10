@@ -40,8 +40,8 @@ AppAsset::register($this);
 
     echo "<form class='navbar-form navbar-right' role='search' action=".Url::to(['site/search'])." method ='POST'>
     <div class='form-group has-feedback'>
-         <input id='searchbox' name='search' type='text' placeholder='Search' class='form-control'>
-         <span id='searchicon' class='fa fa-search form-control-feedback'></span>
+         <input id='searchbox' name='search' type='text' placeholder='&#xF002; Search Wallpaper' style='font-family:Arial, FontAwesome' class='form-control'>
+     
      </div>
 </form>";
 

@@ -1,7 +1,7 @@
 <?php
    use yii\helpers\Html;
 use yii\helpers\Url;
-use dosamigos\disqus\Comments;
+
 
 $this->registerCSS('#big {
     display: block;
@@ -72,15 +72,7 @@ h1 {
 
     </div>
 
-              <div class="comments">
-                <?php    echo Comments::widget([
-    // see http://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables
-    'shortname' => 'wallpoper.id',
-    'identifier' => $image->slug]);
-    ?>
-
-                    </div>
-
+     
 
 
 

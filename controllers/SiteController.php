@@ -78,7 +78,7 @@ class SiteController extends Controller
     }
     public function actionIndex()
     {
-        $images= Wallpaper::find()   ->orderBy(new \yii\db\Expression('rand()'))->limit(30)->all();
+        $images= Wallpaper::find()   ->orderBy(new \yii\db\Expression('rand()'))->limit(50)->all();
           $model = new LoginForm();
         return $this->render('index', ['model'=>$model,'images'=>$images]);
     }
@@ -99,7 +99,7 @@ class SiteController extends Controller
         $controller->actionIndex($keyword);
         
 
-        $images= Wallpaper::find()->where(['keyword'=>$keyword])  ->orderBy(new \yii\db\Expression('rand()'))->limit(30)->all();
+        $images= Wallpaper::find()->where(['keyword'=>$keyword])  ->orderBy(new \yii\db\Expression(' rand()'))->limit(30)->all();
         $model = new LoginForm();
         return $this->render('index', ['model'=>$model,'images'=>$images]);
     }

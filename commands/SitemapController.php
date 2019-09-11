@@ -23,6 +23,12 @@ class SitemapController extends Controller
         foreach ($models as $wallpaper) {
             $sitemap->addItem('http://wallpoper.id/wallpaper/' . $wallpaper->slug, time(), Sitemap::DAILY, 0.3);
         }
+
+        $models =Wallpaper::find()->select('keyword')->distinct()->all();
+        foreach ($models as $wallpaper) {
+            $sitemap->addItem('http://wallpoper.id/category/' . str_replace(" ","%20", $wallpaper->keyword), time(), Sitemap::DAILY, 0.3);
+        }
+
 // write it
         $sitemap->write();
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "329c490c0bc3d0d6f0ec9248f82bfa29",
+    "content-hash": "b8046f7ae1e609b012c9d69bf8bbbb2c",
     "packages": [
         {
             "name": "2amigos/yii2-disqus-widget",
@@ -939,6 +939,51 @@
                 "yii"
             ],
             "time": "2015-06-23T13:06:14+00:00"
+        },
+        {
+            "name": "samdark/sitemap",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/samdark/sitemap.git",
+                "reference": "17dc5602e817d7f16b03c476569fb38e2de48156"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/samdark/sitemap/zipball/17dc5602e817d7f16b03c476569fb38e2de48156",
+                "reference": "17dc5602e817d7f16b03c476569fb38e2de48156",
+                "shasum": ""
+            },
+            "require": {
+                "ext-xmlwriter": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "samdark\\sitemap\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Makarov",
+                    "email": "sam@rmcreative.ru",
+                    "homepage": "http://rmcreative.ru/"
+                }
+            ],
+            "description": "Sitemap and sitemap index builder",
+            "homepage": "https://github.com/samdark/sitemap",
+            "keywords": [
+                "Sitemap"
+            ],
+            "time": "2019-05-23T15:40:59+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2040,7 +2085,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "buchin/badwords": 20
+        "buchin/badwords": 20,
+        "samdark/sitemap": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

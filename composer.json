@@ -25,7 +25,8 @@
         "buchin/bing": "*",
         "buchin/badwords": "dev-master",
         "2amigos/yii2-disqus-widget": "~1.0",
-        "rmrevin/yii2-fontawesome": "2.10.*"
+        "rmrevin/yii2-fontawesome": "2.10.*",
+        "samdark/sitemap": "dev-master"
 
     },
     "require-dev": {

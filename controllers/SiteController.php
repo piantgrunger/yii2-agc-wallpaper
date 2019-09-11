@@ -77,10 +77,20 @@ class SiteController extends Controller
         return parent::beforeAction($action);
     }
     public function actionIndex()
+
     {
-        $images= Wallpaper::find()   ->orderBy(new \yii\db\Expression('rand()'))->limit(50)->all();
-          $model = new LoginForm();
-        return $this->render('index', ['model'=>$model,'images'=>$images]);
+        $categories =Wallpaper::find()->select("keyword")->distinct()->all();
+
+        foreach($categories as $category) {
+          $images[]= Wallpaper::find()->where(["keyword"=>$category->keyword])   ->orderBy(new \yii\db\Expression('rand()'))->one();
+        }
+        return $this->render('index', ['images'=>$images]);
+    }
+    public function actionCategory($category)
+    {
+        $images= Wallpaper::find()->where(["keyword"=>$category])->orderBy(new \yii\db\Expression('rand()'))->limit(50)->all();
+        
+        return $this->render('category', ['images'=>$images]);
     }
 
     /**
@@ -101,7 +111,7 @@ class SiteController extends Controller
 
         $images= Wallpaper::find()->where(['keyword'=>$keyword])  ->orderBy(new \yii\db\Expression(' rand()'))->limit(30)->all();
         $model = new LoginForm();
-        return $this->render('index', ['model'=>$model,'images'=>$images]);
+        return $this->render('category', ['model'=>$model,'images'=>$images]);
     }
 
     public function actionLogin()

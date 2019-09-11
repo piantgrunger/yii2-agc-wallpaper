@@ -49,7 +49,9 @@ $config = [
        // Use pretty URLs
        'enablePrettyUrl' => true,
        'rules' => [
-        'wallpaper/<slug>' => 'wallpaper/index'
+        'wallpaper/<slug>' => 'wallpaper/index',
+        'category/<category>' => 'site/category',
+        
        ],
    ],
       'cache' => [

@@ -11,6 +11,7 @@ use yii\helpers\Url;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
+$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => '/wallpoper.png']);
 
 ?>
 <?php $this->beginPage() ?>

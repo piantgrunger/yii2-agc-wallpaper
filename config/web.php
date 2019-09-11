@@ -7,8 +7,6 @@ $params = require(__DIR__ . '/params.php');
 $config = [
     'id' => 'Template',
     'name' => 'Application',
-    // set target language to be Indonesia
-  'language' => 'id-ID',
 
    'modules' => [
   

@@ -39,7 +39,15 @@ h1 {
 ');
    $this->title = $image->title;
 
+
+       $this->registerMetaTag([
+            'name' => 'description',
+            'content' => $image->title
+        ]);
+
+
     ?>
+
 <div class="index">
 
 <div id="wallpaper" class="col-md-12">

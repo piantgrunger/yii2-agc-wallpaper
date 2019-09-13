@@ -13,10 +13,7 @@ class WallpaperController extends Controller
         $model = Wallpaper::find()->where(['slug'=>$slug])->one();
         $model->view +=1;
         $model->save(false);
-        \Yii::$app->view->registerMetaTag([
-            'name' => 'description',
-            'content' => $model->title
-        ]);
+ 
         $relatedPost = Wallpaper::find()->where(['keyword'=>$model->keyword])
         ->andWhere(['<>','slug',$model->slug])
         ->orderBy(new \yii\db\Expression('rand()'))

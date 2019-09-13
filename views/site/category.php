@@ -22,8 +22,14 @@ h1 {
     padding: 15px 0;
 }
 "
-
+          
 );
+         
+                     $this->registerMetaTag([
+            'name' => 'description',
+            'content' =>'wallpoper, simply described as high quality wallpapers database which searchable by keyword '
+        ]);
+
 
 ?>
 <div class="site-index">

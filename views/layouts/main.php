@@ -20,7 +20,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => '/wall
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="wallpoper, simply described as high quality wallpapers database which searchable by keyword " />
+      
 <meta name="google-site-verification" content="UfoscVo4c0Lpnh1LTmjRjmsr2Ixy0axvwRGaGDY1MOA" />
                   <meta name="msvalidate.01" content="6F7049E0E73367FC1B0F402320D8404B" />
     <?= Html::csrfMetaTags() ?>

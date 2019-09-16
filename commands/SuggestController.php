@@ -19,5 +19,7 @@ class SuggestController extends Controller
                 print($keyword."\n");
             }
         }
+        $controller = new SitemapController(\Yii::$app->controller->id, \Yii::$app);
+        $controller->actionIndex();
     }
 }
